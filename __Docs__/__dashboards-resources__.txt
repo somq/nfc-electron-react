@@ -1,0 +1,7 @@
+react_dashboards
+https://github.com/mrholek/CoreUI-React/tree/master/React_Full_Project
+https://github.com/booleanhunter/ReactJS-AdminLTE
+https://github.com/ant-design/ant-design-pro
+https://github.com/start-react/sb-admin-react
+https://github.com/plouc/mozaik
+https://github.com/booleanhunter/ReactJS-AdminLTE
