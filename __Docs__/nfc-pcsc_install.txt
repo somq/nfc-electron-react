@@ -1,0 +1,14 @@
+see: 
+https://github.com/chentsulin/electron-react-boilerplate/wiki/Module-Structure----Two-package.json-Structure#where-to-put-native-modules
+https://github.com/pokusew/nfc-pcsc/issues/24
+https://electronjs.org/docs/tutorial/using-native-node-modules
+
+$> 
+cd app
+npm install nfc-pcsc --save
+npm install --save-dev electron-rebuild
+.\node_modules\.bin\electron-rebuild.cmd
+
+*** 
+import { NFC } from 'nfc-pcsc';
+***
