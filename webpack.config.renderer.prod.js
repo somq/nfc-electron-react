@@ -82,6 +82,21 @@ export default merge.smart(baseConfig, {
           }]
         }),
       },
+      // LESS SUPPORT - @TODO: Check if it works in prod mod
+      {
+        test: /\.less$/,
+        use: ExtractTextPlugin.extract({
+          use: [
+            {
+              loader: 'css-loader'
+            },
+            {
+              loader: 'less-loader'
+            }
+          ],
+          fallback: 'style-loader',
+        })
+      },
       // WOFF Font
       {
         test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,

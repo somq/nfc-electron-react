@@ -10,6 +10,12 @@
     "node": true
   },
   "rules": {
+    "no-trailing-spaces": ["off"],
+    "no-multiple-empty-lines": ["off"],
+    "indent": ["off"],
+    "import/first": ["off"],
+    "eol-last": ["off"],
+    "linebreak-style": ["off"],
     "arrow-parens": ["off"],
     "compat/compat": "error",
     "consistent-return": "off",

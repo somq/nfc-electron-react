@@ -11,13 +11,12 @@
   },
   "scripts": {
     "postinstallLegacy": "npm rebuild --runtime=electron --target=1.6.6 --disturl=https://atom.io/download/atom-shell --build-from-source",
-    "postinstall": "npm rebuild --runtime=electron --target=1.6.6 --disturl=https://atom.io/download/atom-shell --build-from-source"
+    "postinstall": "electron-rebuild"
   },
   "license": "MIT",
   "dependencies": {
+    "electron-rebuild": "^1.6.0",
     "nfc-pcsc": "^0.6.1"
   },
-  "devDependencies": {
-    "electron-rebuild": "^1.6.0"
-  }
+  "devDependencies": {}
 }

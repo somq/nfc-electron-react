@@ -24,6 +24,12 @@ const publicPath = `http://localhost:${port}/dist`;
 const dll = path.resolve(process.cwd(), 'dll');
 const manifest = path.resolve(dll, 'renderer.json');
 
+const lessToJs = require('less-vars-to-js');
+const themeVariables = lessToJs(fs.readFileSync(path.join(__dirname, './app/app.global.less'), 'utf8'));
+
+console.log('themeVariables', themeVariables)
+console.log('__dirname', __dirname)
+
 /**
  * Warn if the DLL is not built
  */
@@ -137,6 +143,36 @@ export default merge.smart(baseConfig, {
           },
           {
             loader: 'sass-loader'
+          }
+        ]
+      },
+      // LESS SUPPORT
+      // {
+      //   test: /\.less$/,
+      //   use: [
+      //     {
+      //       loader: 'style-loader'
+      //     },
+      //     {
+      //       loader: 'css-loader',
+      //       options: {
+      //         sourceMap: true,
+      //       },
+      //     },
+      //     {
+      //       loader: 'less-loader'
+      //     }
+      //   ]
+      // },
+      {
+        test: /\.less$/,
+        use: [
+          {loader: "style-loader"},
+          {loader: "css-loader"},
+          {loader: "less-loader",
+            options: {
+              modifyVars: themeVariables
+            }
           }
         ]
       },
