@@ -320,7 +320,7 @@ export default class Home extends Component {
               </div>
             </Content>
             <Footer style={{ textAlign: 'center' }}>
-              Oberthur Cash Protection ©2017
+              COMPANY ©2017
             </Footer>
           </Layout>
           
